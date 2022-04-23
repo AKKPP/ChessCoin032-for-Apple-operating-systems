@@ -469,13 +469,11 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   inputText: {
-    flex: 1,
     marginHorizontal: 8,
     minHeight: 36,
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BlueCurrentTheme.colors.feeText,
     height: 36,
-    paddingVertical:10,
-    lineHeight: 40,
+    paddingTop: 6,
   },
   serverAddTitle: {
     flexDirection: 'row',
