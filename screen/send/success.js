@@ -11,6 +11,8 @@ import { BlueButton, BlueCard } from '../../BlueComponents';
 import { BitcoinUnit } from '../../models/bitcoinUnits';
 import loc from '../../loc';
 
+const currency = require('../../blue_modules/currency');
+
 const Success = () => {
   const pop = () => {
     dangerouslyGetParent().pop();
@@ -30,7 +32,7 @@ const Success = () => {
     },
   });
   useEffect(() => {
-    console.log('send/success - useEffect');
+    //console.log('send/success - useEffect');
     ReactNativeHapticFeedback.trigger('notificationSuccess', { ignoreAndroidSystemSettings: false });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -38,7 +40,7 @@ const Success = () => {
   return (
     <SafeAreaView style={[styles.root, stylesHook.root]}>
       <SuccessView
-        amount={amount}
+        amount={parseInt(amount)}
         amountUnit={amountUnit}
         fee={fee}
         invoiceDescription={invoiceDescription}
@@ -80,16 +82,16 @@ export const SuccessView = ({ amount, amountUnit, fee, invoiceDescription, shoul
         <View style={styles.view}>
           {amount && (
             <>
-              <Text style={[styles.amountValue, stylesHook.amountValue]}>{amount}</Text>
-              <Text style={[styles.amountUnit, stylesHook.amountUnit]}>{' ' + loc.units[amountUnit]}</Text>
+              <Text style={[styles.amountValue, stylesHook.amountValue]}>{currency.satoshiToBTC(amount)}</Text>
+              <Text style={[styles.amountUnit, stylesHook.amountUnit]}>{' ' + loc.units[BitcoinUnit.CHESS]}</Text>
             </>
           )}
         </View>
-        {fee > 0 && (
+        {
           <Text style={styles.feeText}>
             {loc.send.create_fee}: {new BigNumber(fee).toFixed()} {loc.units[BitcoinUnit.CHESS]}
           </Text>
-        )}
+        }
         <Text numberOfLines={0} style={styles.feeText}>
           {invoiceDescription}
         </Text>

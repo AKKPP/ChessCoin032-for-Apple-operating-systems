@@ -653,13 +653,13 @@ const WalletTransactions = () => {
               </Text>
               {isLightning() && <Text style={styles.emptyTxsLightning}>{loc.wallets.list_empty_txs2_lightning}</Text>}
 
-              {!isLightning() && (
+              {/*!isLightning() && (
                 <TouchableOpacity onPress={navigateToBuyBitcoin} style={styles.buyBitcoin}>
                   <Text testID="NoTxBuyBitcoin" style={styles.buyBitcoinText}>
                     {loc.wallets.list_tap_here_to_buy}
                   </Text>
                 </TouchableOpacity>
-              )}
+              )*/}
             </ScrollView>
           }
           onRefresh={refreshTransactions}
