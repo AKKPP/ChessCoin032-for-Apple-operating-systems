@@ -15,8 +15,8 @@ node --version && npm --version
 * In your console:
 
 ```
-git clone https://github.com/OleksandrAAA/ChessCoin032-Wallet.git
-cd ChessCoin032-Wallet
+git clone https://github.com/OleksandrAAA/ChessCoin032-Wallet-ios.git
+cd ChessCoin032-Wallet-ios
 npm install
 ```
 

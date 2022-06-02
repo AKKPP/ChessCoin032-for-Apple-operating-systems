@@ -112,9 +112,9 @@ const NotificationSettings = () => {
           type: 'font-awesome',
           color: colors.foregroundColor,
         }}
-        onPress={() => Linking.openURL('https://github.com/Jenova7/GroundControl')}
-        titleStyle={{ color: colors.buttonAlternativeTextColor }}
-        title="github.com/Jenova7/GroundControl"
+        onPress={() => Linking.openURL('https://github.com/OleksandrAAA/GroundControl')}
+        titleStyle={{ color: colors.foregroundColor, fontSize: 14 }}
+        title="github.com/OleksandrAAA/GroundControl"
         color={colors.buttonTextColor}
         buttonStyle={styles.buttonStyle}
       />

@@ -38,6 +38,7 @@ function Notifications(props) {
    */
   const configureNotifications = async function () {
     return new Promise(function (resolve) {
+
       PushNotification.configure({
         // (optional) Called when Token is generated (iOS and Android)
         onRegister: async function (token) {

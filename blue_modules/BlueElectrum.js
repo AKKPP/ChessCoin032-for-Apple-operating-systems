@@ -46,7 +46,7 @@ const storageKey = 'ELECTRUM_PEERS';
 //  { host: 'electrum2.bluewallet.io', ssl: '443' },
 //];
 
-const defaultPeer = { host: '54.36.163.33', ssl: '57302' };
+const defaultPeer = { host: '51.178.41.236', ssl: '57302' };
 const hardcodedPeers = [
   { host: '54.36.163.33', ssl: '57302' },
   { host: '51.178.41.236', ssl: '57302' },

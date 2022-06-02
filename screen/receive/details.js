@@ -389,7 +389,7 @@ const ReceiveDetails = () => {
         <HandoffComponent
           title={`Bitcoin Transaction ${address}`}
           type="com.electrum.chess032wallet"
-          url={`https://blockstream.info/address/${address}`}
+          url={`https://chainz.cryptoid.info/chess/tx.dws?${address}.htm`}
         />
       )}
       {showAddress ? renderReceiveDetails() : <BlueLoading />}

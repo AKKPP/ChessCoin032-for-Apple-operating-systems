@@ -1407,7 +1407,6 @@ export const BlueTransactionListItem = React.memo(({ item, itemPriceUnit = Bitco
   const handleOnCopyTransactionID = useCallback(() => Clipboard.setString(item.hash), [item.hash]);
   const handleOnCopyNote = useCallback(() => Clipboard.setString(subtitle), [subtitle]);
   const handleOnViewOnBlockExplorer = useCallback(() => {
-    //const url = `https://chainz.cryptoid.info/chess/block.dws?${item.hash}.htm`;
     const url = `https://chainz.cryptoid.info/chess/tx.dws?${item.hash}.htm`;
     Linking.canOpenURL(url).then(supported => {
       if (supported) {
@@ -1416,7 +1415,6 @@ export const BlueTransactionListItem = React.memo(({ item, itemPriceUnit = Bitco
     });
   }, [item.hash]);
   const handleCopyOpenInBlockExplorerPress = useCallback(() => {
-    //Clipboard.setString(`https://chainz.cryptoid.info/chess/block.dws?${item.hash}.htm`);
     Clipboard.setString(`https://chainz.cryptoid.info/chess/tx.dws?${item.hash}.htm`);
   }, [item.hash]);
   const toolTipActions = useMemo(() => {

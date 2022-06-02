@@ -191,7 +191,7 @@ export default class HodlHodlMyContracts extends Component {
               <View style={styles.statusGrayWrapper2}>
                 <Text
                   style={styles.statusGrayText2}
-                  onPress={() => Linking.openURL(`https://blockstream.info/address/${this.state.contractToDisplay.release_address}`)}
+                  onPress={() => Linking.openURL(`https://chainz.cryptoid.info/chess/tx.dws?${this.state.contractToDisplay.release_address}.htm`)}
                 >
                   {this.state.contractToDisplay.release_address}
                 </Text>
@@ -204,7 +204,7 @@ export default class HodlHodlMyContracts extends Component {
               <View style={styles.statusGrayWrapper2}>
                 <Text
                   style={styles.statusGrayText2}
-                  onPress={() => Linking.openURL(`https://blockstream.info/address/${this.state.contractToDisplay.escrow.address}`)}
+                  onPress={() => Linking.openURL(`https://chainz.cryptoid.info/chess/tx.dws?${this.state.contractToDisplay.escrow.address}.htm`)}
                 >
                   {this.state.contractToDisplay.escrow.address}
                 </Text>

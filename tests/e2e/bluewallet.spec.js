@@ -82,11 +82,10 @@ describe('BlueWallet UI Tests', () => {
     await element(by.id('NetworkSettings')).tap();
 
     // network -> electrum server
-    // change electrum server to electrum.blockstream.info and revert it back
     await element(by.id('ElectrumSettings')).tap();
-    await element(by.id('HostInput')).replaceText('electrum.blockstream.info\n');
-    await element(by.id('PortInput')).replaceText('50001\n');
-    await element(by.id('SSLPortInput')).replaceText('50002\n');
+    await element(by.id('HostInput')).replaceText('51.178.41.236\n');
+    await element(by.id('PortInput')).replaceText('57301\n');
+    await element(by.id('SSLPortInput')).replaceText('57302\n');
     await element(by.id('Save')).tap();
     await sup('OK');
     await element(by.text('OK')).tap();

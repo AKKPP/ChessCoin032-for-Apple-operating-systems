@@ -29,11 +29,6 @@
     "node": ">=10.16.0",
     "npm": ">=6.9.0"
   },
-  "resolutions": {
-    "**/pbkdf2": "3.1.1",
-    "**/**/pbkdf2": "3.1.1",
-    "**/**/**/pbkdf2": "3.1.1"
-  },
   "scripts": {
     "clean": "cd android/; ./gradlew clean; cd ..; rm -r -f /tmp/metro-cache/; rm -r -f node_modules/; npm cache clean --force; npm i; npm start -- --reset-cache",
     "clean:ios": "rm -fr node_modules && rm -fr ios/Pods && npm i && cd ios && pod update && cd ..; npm start -- --reset-cache",
