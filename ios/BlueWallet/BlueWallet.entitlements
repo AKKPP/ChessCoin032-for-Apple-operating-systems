@@ -8,7 +8,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.io.electraprotocol.xepwallet5</string>
+		<string>group.io.electrum.chess032wallet</string>
 	</array>
 	<key>com.apple.security.device.camera</key>
 	<true/>
