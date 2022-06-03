@@ -87,7 +87,7 @@ const About = () => {
     Linking.openURL('https://t.me/joinchat/-I8F2uaxZSRkZDcy');
   };
   const handleOnGithubPress = () => {
-    Linking.openURL('https://github.com/OleksandrAAA/ChessCoin032-Wallet');
+    Linking.openURL('https://github.com/OleksandrAAA/ChessCoin032-Wallet-ios');
   };
   const handleOnWebsitePress = () => {
     Linking.openURL('https://www.chesscoin032.com/');
