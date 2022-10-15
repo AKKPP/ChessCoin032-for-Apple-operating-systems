@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.io.electrum.chess032wallet</string>
+		<string>group.io.akkpp.chess032wallet</string>
 	</array>
 	<key>com.apple.security.network.client</key>
 	<true/>

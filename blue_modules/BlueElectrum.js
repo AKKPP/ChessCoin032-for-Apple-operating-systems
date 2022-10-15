@@ -40,11 +40,6 @@ async function _getRealm() {
 }
 
 const storageKey = 'ELECTRUM_PEERS';
-//const defaultPeer = { host: 'electrum1.bluewallet.io', ssl: '57302' };
-//const hardcodedPeers = [
-//  { host: 'electrum1.bluewallet.io', ssl: '443' },
-//  { host: 'electrum2.bluewallet.io', ssl: '443' },
-//];
 
 const defaultPeer = { host: '51.178.41.236', ssl: '57302' };
 const hardcodedPeers = [
@@ -72,7 +67,7 @@ async function connectMain() {
     usingPeer = savedPeer;
   }
 
-  await DefaultPreference.setName('group.com.electrum.chess032wallet');
+  await DefaultPreference.setName('group.com.akkpp.chess032wallet');
   try {
     if (usingPeer.host.endsWith('onion')) {
       const randomPeer = await getRandomHardcodedPeer();
@@ -188,7 +183,7 @@ async function presentNetworkErrorAlert(usingPeer) {
                   await AsyncStorage.setItem(AppStorage.ELECTRUM_TCP_PORT, '');
                   await AsyncStorage.setItem(AppStorage.ELECTRUM_SSL_PORT, '');
                   try {
-                    await DefaultPreference.setName('group.com.electrum.chess032wallet');
+                    await DefaultPreference.setName('group.com.akkpp.chess032wallet');
                     await DefaultPreference.clear(AppStorage.ELECTRUM_HOST);
                     await DefaultPreference.clear(AppStorage.ELECTRUM_SSL_PORT);
                     await DefaultPreference.clear(AppStorage.ELECTRUM_TCP_PORT);

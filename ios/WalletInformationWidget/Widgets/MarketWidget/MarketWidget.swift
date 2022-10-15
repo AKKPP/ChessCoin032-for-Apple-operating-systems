@@ -2,8 +2,7 @@
 //  MarketWidget.swift
 //  MarketWidget
 //
-//  Created by Marcos Rodriguez on 11/6/20.
-//  Copyright © 2020 BlueWallet. All rights reserved.
+//  Copyright © 2022 Chess032Wallet. All rights reserved.
 //
 
 import WidgetKit

@@ -476,7 +476,7 @@
     "share": "Partager",
     "view": "Vue",
     "manage_keys": "Gérer les clés",
-    "how_many_signatures_can_bluewallet_make": "Combien de signatures Chess032Wallet peut-il faire",
+    "how_many_signatures_can_Chess032Wallet_make": "Combien de signatures Chess032Wallet peut-il faire",
     "signatures_required_to_spend": "Signatures necessaires {number}",
     "signatures_we_can_make": "peut faire {number}",
     "scan_or_import_file": "Scanner ou importer fichier",

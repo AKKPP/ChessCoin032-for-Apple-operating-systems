@@ -388,7 +388,7 @@ const ReceiveDetails = () => {
       {address !== undefined && showAddress && (
         <HandoffComponent
           title={`Bitcoin Transaction ${address}`}
-          type="com.electrum.chess032wallet"
+          type="com.akkpp.chess032wallet"
           url={`https://chainz.cryptoid.info/chess/tx.dws?${address}.htm`}
         />
       )}

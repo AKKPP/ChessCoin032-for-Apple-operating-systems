@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
-    margin: 100,
+    backgroundColor: '#FFFFFF',
   },
   biometric: {
     flex: 1,

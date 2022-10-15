@@ -21,4 +21,4 @@ patch node_modules/realm/RealmJS.podspec ./scripts/maccatalystpatches/realm.patc
 cd ios
 pod update
 echo ""
-echo "You should now be able to compile BlueWallet using Mac Catalyst on XCode. Enable Mac under Deployment Info by using XCode. If you are running macOS Catalina, you will need to remove the iOS 14 Widgets from the project targets."
+echo "You should now be able to compile Chess032Wallet using Mac Catalyst on XCode. Enable Mac under Deployment Info by using XCode. If you are running macOS Catalina, you will need to remove the iOS 14 Widgets from the project targets."

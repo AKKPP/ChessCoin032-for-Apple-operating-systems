@@ -52,7 +52,7 @@ function WidgetCommunication() {
     }
   };
   const setValues = async () => {
-    await DefaultPreference.setName('group.com.electrum.chess032wallet');
+    await DefaultPreference.setName('group.com.akkpp.chess032wallet');
     const { allWalletsBalance, latestTransactionTime } = await allWalletsBalanceAndTransactionTime();
     await DefaultPreference.set(WidgetCommunication.WidgetCommunicationAllWalletsSatoshiBalance, JSON.stringify(allWalletsBalance));
     await DefaultPreference.set(

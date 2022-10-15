@@ -1,9 +1,9 @@
 //
 //  UserDefaultsExtension.swift
-//  BlueWallet
+//  Chess032Wallet
 //
 //  Created by Marcos Rodriguez on 2/8/21.
-//  Copyright © 2021 BlueWallet. All rights reserved.
+//  Copyright © 2022 Chess032Wallet. All rights reserved.
 //
 
 import Foundation

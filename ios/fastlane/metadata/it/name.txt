@@ -1,1 +1,1 @@
-BlueWallet - Bitcoin wallet
+Chess032Wallet - ChessCoin 0.32% wallet

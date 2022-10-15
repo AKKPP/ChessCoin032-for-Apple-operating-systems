@@ -726,7 +726,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwiftSocket:
-    :commit: 4a3af2cbbaef5b2fddbaff80f6767fecc0ce5fe2
+    :commit: 97b7599da90f9c07ecf65551718706dc30e6838e
     :git: https://github.com/swiftsocket/SwiftSocket.git
 
 SPEC CHECKSUMS:
@@ -735,7 +735,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: c71c5917ec0ad2de41d5d06a5855f6d5eda06971
-  FBReactNativeSpec: 8eab3725219da0e4c78b3ecb09bdc079e6935873
+  FBReactNativeSpec: 94f39c2c83d55f99d47cc62816d3b5d8e02ada00
   Flipper: 1bd2db48dcc31e4b167b9a33ec1df01c2ded4893
   Flipper-DoubleConversion: 38631e41ef4f9b12861c67d17cb5518d06badc41
   Flipper-Folly: 755929a4f851b2fb2c347d533a23f191b008554c
@@ -818,6 +818,6 @@ SPEC CHECKSUMS:
   Yoga: e6ecf3fa25af9d4c87e94ad7d5d292eedef49749
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 994cf60e5f08d0106b41c1485a814bd2c64c993a
+PODFILE CHECKSUM: 73d7c2e2d385cd36ec2f4320b067119aa924e814
 
 COCOAPODS: 1.11.3

@@ -590,8 +590,8 @@ const WalletTransactions = () => {
       <StatusBar barStyle="light-content" backgroundColor={WalletGradient.headerColorFor(wallet.type)} />
       {wallet.chain === Chain.ONCHAIN && wallet.type !== MultisigHDWallet.type && (
         <HandoffComponent
-          title={`Bitcoin Wallet ${wallet.getLabel()}`}
-          type="com.electrum.chess032wallet"
+          title={`ChessCoin 032% Wallet ${wallet.getLabel()}`}
+          type="com.akkpp.chess032wallet"
           url={`https://blockpath.com/search/addr?q=${wallet.getXpub()}`}
         />
       )}

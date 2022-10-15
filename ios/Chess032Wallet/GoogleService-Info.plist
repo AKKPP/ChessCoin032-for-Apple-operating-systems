@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>262394281108-gnuhiq44ttfb722otev64keom55tss88.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.262394281108-gnuhiq44ttfb722otev64keom55tss88</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDlqa0xP2z_b4RzF64oprijtfD-8PhzPgs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>262394281108</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.akkpp.chess032wallet</string>
+	<key>PROJECT_ID</key>
+	<string>groundcontrol-7f504</string>
+	<key>STORAGE_BUCKET</key>
+	<string>groundcontrol-7f504.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:262394281108:ios:5e169763fd89e69ee08881</string>
+</dict>
+</plist>

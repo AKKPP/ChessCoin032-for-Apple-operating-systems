@@ -2,8 +2,7 @@
 //  WalletInformationWidget.swift
 //  WalletInformationWidget
 //
-//  Created by Marcos Rodriguez on 10/29/20.
-//  Copyright © 2020 BlueWallet. All rights reserved.
+//  Copyright © 2022 Chess032Wallet. All rights reserved.
 //
 
 import WidgetKit

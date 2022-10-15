@@ -1,6 +1,6 @@
 A Bitcoin wallet that allows you to store, send Bitcoin, receive Bitcoin and buy Bitcoin with focus on security and simplicity.
 
-On BlueWallet, a bitcoin wallet you own your private keys. A Bitcoin wallet made by Bitcoin users for the community.
+On Chess032Wallet, a bitcoin wallet you own your private keys. A Bitcoin wallet made by Bitcoin users for the community.
 
 You can instantly transact with anyone in the world and transform the financial system right from your pocket.
 
@@ -31,7 +31,7 @@ Connect to your hardware wallet and keep your coins in Cold storage
 2 - Focused on your experience
 
 Be in control
-Private keys never leave your device. You control your private keys
+Private keys never leave your device.You control your private keys
 
 Flexible fees
 Starting from 1 Satoshi. Defined by you, the user
