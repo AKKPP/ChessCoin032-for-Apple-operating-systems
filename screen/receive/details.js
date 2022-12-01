@@ -89,8 +89,9 @@ const ReceiveDetails = () => {
     },
     qrCodeContainer: { borderWidth: 6, borderRadius: 8, borderColor: '#FFFFFF' },
     root: {
-      // flex: 1,
+      flex: 1,
       backgroundColor: colors.elevated,
+      height: '100%',      
       justifyContent: 'space-between',
     },
     scrollBody: {

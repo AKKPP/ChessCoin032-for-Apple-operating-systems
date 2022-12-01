@@ -7,7 +7,7 @@ jasmine.getEnv().addReporter({
   specDone: result => (jasmine.currentTest = result),
 });
 
-describe('BlueWallet UI Tests', () => {
+describe('Chess032Wallet UI Tests', () => {
   it('selftest passes', async () => {
     const lockFile = '/tmp/travislock.' + hashIt(jasmine.currentTest.fullName);
     if (process.env.TRAVIS) {

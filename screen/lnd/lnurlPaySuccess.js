@@ -165,6 +165,7 @@ const styles = StyleSheet.create({
   root: {
     padding: 0,
   },
+
   iconContainer: {
     backgroundColor: '#ccddf9',
     width: 120,

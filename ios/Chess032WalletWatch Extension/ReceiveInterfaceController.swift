@@ -55,7 +55,7 @@ class ReceiveInterfaceController: WKInterfaceController {
               self?.toggleViewButtonPressed()
               WCSession.default.sendMessage(["message": "fetchTransactions"], replyHandler: nil, errorHandler: nil)
             } else {
-              self?.presentAlert(withTitle: "Error", message: "Unable to create invoice. Please, make sure your iPhone is paired and nearby.", preferredStyle: .alert, actions: [WKAlertAction(title: "OK", style: .default, handler: { [weak self] in
+              self?.presentAlert(withTitle: "Error", message: "Unable to create invoice. Please open Chess032Wallet on your iPhone and unlock your wallets.", preferredStyle: .alert, actions: [WKAlertAction(title: "OK", style: .default, handler: { [weak self] in
                 self?.dismiss()
                 self?.pop()
                 })])
@@ -64,7 +64,7 @@ class ReceiveInterfaceController: WKInterfaceController {
         })
       } else {
         guard let notificationObject = notification.object as? SpecifyInterfaceController.SpecificQRCodeContent, let walletContext = self?.wallet, !walletContext.receiveAddress.isEmpty, let receiveAddress = self?.wallet?.receiveAddress else { return }
-        var address = "bitcoin:\(receiveAddress)"
+        var address = "chesscoin:\(receiveAddress)"
         
         var hasAmount = false
         if let amount = notificationObject.amount {

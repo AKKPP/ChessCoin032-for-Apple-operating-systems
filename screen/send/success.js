@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     marginBottom: 53,
   },
   lottie: {
-    width: 400,
-    height: 400,
+    width: 120,
+    height: 120,
   },
 });

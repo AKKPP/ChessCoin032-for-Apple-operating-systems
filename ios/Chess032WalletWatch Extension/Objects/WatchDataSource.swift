@@ -20,10 +20,16 @@ class WatchDataSource: NSObject, WCSessionDelegate {
   
   static let shared = WatchDataSource()
   var wallets: [Wallet] = [Wallet]()
+  var companionWalletsInitialized = false
   private let keychain = KeychainSwift()
   
   override init() {
     super.init()
+    if let existingData = keychain.getData(Wallet.identifier), let walletData = ((try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(existingData) as? [Wallet]) as [Wallet]??) {
+      guard let walletData = walletData, walletData != self.wallets  else { return }
+      wallets = walletData
+      WatchDataSource.postDataUpdatedNotification()
+    }
     if WCSession.isSupported() {
       print("Activating watch session")
       WCSession.default.delegate = self
@@ -108,6 +114,9 @@ class WatchDataSource: NSObject, WCSessionDelegate {
       UserDefaults.standard.set(preferredFiatCurrencyUnit.endPointKey, forKey: "preferredFiatCurrency")
       UserDefaults.standard.synchronize()
         ExtensionDelegate.preferredFiatCurrencyChanged()
+    } else if let isWalletsInitialized = data["isWalletsInitialized"] as? Bool {
+      companionWalletsInitialized = isWalletsInitialized
+      NotificationCenter.default.post(Notifications.dataUpdated)
     } else {
       WatchDataSource.shared.processWalletsData(walletsInfo: data)
     }
@@ -119,15 +128,12 @@ class WatchDataSource: NSObject, WCSessionDelegate {
   
   func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
     if activationState == .activated {
-      if let existingData = keychain.getData(Wallet.identifier), let walletData = ((try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(existingData) as? [Wallet]) as [Wallet]??) {
-        guard let walletData = walletData, walletData != self.wallets  else { return }
-        wallets = walletData
-        WatchDataSource.postDataUpdatedNotification()
-      }
       WCSession.default.sendMessage(["message" : "sendApplicationContext"], replyHandler: { (replyData) in
       }) { (error) in
         print(error)
       }
+    } else {
+      WatchDataSource.shared.companionWalletsInitialized = false
     }
   }
   

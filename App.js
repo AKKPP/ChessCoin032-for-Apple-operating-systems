@@ -49,7 +49,7 @@ if (process.env.NODE_ENV !== 'development') {
 }
 
 const ClipboardContentType = Object.freeze({
-  BITCOIN: 'BITCOIN',
+  BITCOIN: 'CHESSCOIN',
   LIGHTNING: 'LIGHTNING',
 });
 

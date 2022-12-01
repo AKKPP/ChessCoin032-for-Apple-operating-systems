@@ -100,7 +100,7 @@ export class LightningCustodianWallet extends LegacyWallet {
 
   async createAccount(isTest) {
     const response = await this._api.post('/create', {
-      body: { partnerid: 'bluewallet', accounttype: (isTest && 'test') || 'common' },
+      body: { partnerid: 'chess032wallet', accounttype: (isTest && 'test') || 'common' },
       headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
     });
     const json = response.body;
@@ -496,12 +496,12 @@ export class LightningCustodianWallet extends LegacyWallet {
       throw new Error('API error: ' + json.message + ' (code ' + json.code + ')');
     }
 
-    if (!json.BTC || typeof json.BTC.AvailableBalance === 'undefined') {
+    if (!json.CHESS|| typeof json.CHESS.AvailableBalance === 'undefined') {
       throw new Error('API unexpected response: ' + JSON.stringify(response.body));
     }
 
     this.balance_raw = json;
-    this.balance = json.BTC.AvailableBalance;
+    this.balance = json.CHESS.AvailableBalance;
     this._lastBalanceFetch = +new Date();
   }
 

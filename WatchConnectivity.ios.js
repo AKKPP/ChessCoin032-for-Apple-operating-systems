@@ -69,9 +69,13 @@ function WatchConnectivity() {
     if (message.request === 'createInvoice') {
       handleLightningInvoiceCreateRequest(message.walletIndex, message.amount, message.description)
         .then(createInvoiceRequest => reply({ invoicePaymentRequest: createInvoiceRequest }))
-        .catch(e => console.log(e));
+        .catch(e => {
+          console.log(e);
+          reply({});
+        });
     } else if (message.message === 'sendApplicationContext') {
       sendWalletsToWatch();
+      reply({});
     } else if (message.message === 'fetchTransactions') {
       fetchWalletTransactions().then(() => saveToDisk());
     } else if (message.message === 'hideBalance') {
@@ -207,7 +211,8 @@ function WatchConnectivity() {
         hideBalance: wallet.hideBalance,
       };
       if (wallet.chain === Chain.ONCHAIN && wallet.type !== MultisigHDWallet.type) {
-        walletInformation.push({ xpub: wallet.getXpub() ? wallet.getXpub() : wallet.getSecret() });
+        //walletInformation.push({ xpub: wallet.getXpub() ? wallet.getXpub() : wallet.getSecret() });
+        walletInformation.xpub = wallet.getXpub() ? wallet.getXpub() : wallet.getSecret();
       }
       walletsToProcess.push(walletInformation);
     }

@@ -41,10 +41,10 @@ class DeeplinkSchemaMatch {
 
     console.log("======navigationRouteFor::", event.url)
     
-    if (event.url.toLowerCase().startsWith('bluewallet:chesscoin:') || event.url.toLowerCase().startsWith('bluewallet:lightning:')) {
-      event.url = event.url.substring(11);
-    } else if (event.url.toLocaleLowerCase().startsWith('bluewallet://widget?action=')) {
-      event.url = event.url.substring('bluewallet://'.length);
+    if (event.url.toLowerCase().startsWith('chesscoin:')) {
+      event.url = event.url.substring(10);
+    } else if (event.url.toLocaleLowerCase().startsWith('chesscoin://widget?action=')) {
+      event.url = event.url.substring('chesscoin://'.length);
     }
 
     if (DeeplinkSchemaMatch.isWidgetAction(event.url)) {
@@ -204,7 +204,7 @@ class DeeplinkSchemaMatch {
               params: { uri: event.url },
             },
           ]);
-        } else if (urlObject.protocol === 'bluewallet:' || urlObject.protocol === 'lapp:' || urlObject.protocol === 'blue:') {
+        } else if (urlObject.protocol === 'chesscoin:' || urlObject.protocol === 'lapp:' || urlObject.protocol === 'blue:') {
           switch (urlObject.host) {
             case 'openlappbrowser': {
               console.log('opening LAPP', urlObject.query.url);
@@ -295,7 +295,7 @@ class DeeplinkSchemaMatch {
    * @return {string|boolean}
    */
   static getServerFromSetElectrumServerAction(url) {
-    if (!url.startsWith('bluewallet:setelectrumserver') && !url.startsWith('setelectrumserver')) return false;
+    if (!url.startsWith('chesscoin:setelectrumserver') && !url.startsWith('setelectrumserver')) return false;
     const splt = url.split('server=');
     if (splt[1]) return decodeURIComponent(splt[1]);
     return false;
@@ -309,7 +309,7 @@ class DeeplinkSchemaMatch {
    * @return {string|boolean}
    */
   static getUrlFromSetLndhubUrlAction(url) {
-    if (!url.startsWith('bluewallet:setlndhuburl') && !url.startsWith('setlndhuburl')) return false;
+    if (!url.startsWith('chesscoin:setlndhuburl') && !url.startsWith('setlndhuburl')) return false;
     const splt = url.split('url=');
     if (splt[1]) return decodeURIComponent(splt[1]);
     return false;

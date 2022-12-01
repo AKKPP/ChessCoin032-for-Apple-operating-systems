@@ -21,9 +21,9 @@ class SpecifyInterfaceController: WKInterfaceController {
     var amount: Double?
     var description: String?
     var amountStringArray: [String] = ["0"]
-    var bitcoinUnit: NumericKeypadInterfaceController.NumericKeypadType = .BTC
+    var bitcoinUnit: NumericKeypadInterfaceController.NumericKeypadType = .CHESS
   }
-  var specifiedQRContent: SpecificQRCodeContent = SpecificQRCodeContent(amount: nil, description: nil, amountStringArray: ["0"], bitcoinUnit: .BTC)
+  var specifiedQRContent: SpecificQRCodeContent = SpecificQRCodeContent(amount: nil, description: nil, amountStringArray: ["0"], bitcoinUnit: .CHESS)
   var wallet: Wallet?
   struct NotificationName {
     static let createQRCode = Notification.Name(rawValue: "Notification.SpecifyInterfaceController.createQRCode")
@@ -40,7 +40,7 @@ class SpecifyInterfaceController: WKInterfaceController {
     let wallet = WatchDataSource.shared.wallets[identifier]
     self.wallet = wallet
     self.createButton.setAlpha(0.5)
-    self.specifiedQRContent.bitcoinUnit = wallet.type == "lightningCustodianWallet" ? .SATS : .BTC
+    self.specifiedQRContent.bitcoinUnit = wallet.type == "lightningCustodianWallet" ? .SATS : .CHESS
     NotificationCenter.default.addObserver(forName: NumericKeypadInterfaceController.NotificationName.keypadDataChanged, object: nil, queue: nil) { [weak self] (notification) in
       guard let amountObject = notification.object as? [String], !amountObject.isEmpty else { return }
       if amountObject.count == 1 && (amountObject.first == "." || amountObject.first == "0") {

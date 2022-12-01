@@ -940,8 +940,6 @@ export class AbstractHDElectrumWallet extends AbstractHDWallet {
       tx = psbt.finalizeAllInputs().extractTransaction();
     }
 
-    console.log('* abstract-hd-electrum-wallet: tx = ', tx);
-
     return { tx, inputs, outputs, fee, psbt };
   }
 

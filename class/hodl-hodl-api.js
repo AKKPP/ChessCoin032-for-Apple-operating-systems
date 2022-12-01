@@ -40,7 +40,7 @@ export class HodlHodlApi {
   constructor(apiKey = false) {
     this.baseURI = 'https://hodlhodl.com/';
     this.apiKey = apiKey || 'cmO8iLFgx9wrxCe9R7zFtbWpqVqpGuDfXR3FJB0PSGCd7EAh3xgG51vBKgNTAF8fEEpS0loqZ9P1fDZt';
-    this.useragent = process.env.HODLHODL_USERAGENT || 'bluewallet';
+    this.useragent = process.env.HODLHODL_USERAGENT || 'chesscoin';
     this._api = new Frisbee({ baseURI: this.baseURI });
   }
 
